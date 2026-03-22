@@ -86,18 +86,20 @@ window.addEventListener("load", function() {
     countdown();
     setTimeout(function(){
         document.getElementById("locally").remove();
-        const relayId = Math.floor(Math.random() * 3);
+        const relayId = Math.floor(Math.random() * 4); // Updated to 4 to include the 4th relay
         window.eaglercraftOpts = {
-            container: "game_frame", assetsURI: getAssetsURI(),
+            container: "game_frame", 
+            assetsURI: getAssetsURI(),
             serverWorkerURI: createWorkerURI("sp_worker"),
-            worldsFolder: "TEST", mainMenu: { splashes: [
+            mainMenu: { splashes: [
             "RUN FOR YOUR LIFE!", "This is his client..", "You traitor!", "He's watching you..", "Please help me!",
             "AHHHHHHH!", "I'm trapped..", "He likes to stalk..", ":}", "T^T", "You can take over!"
-            ]}, worldsFolder: "OFFLINE", 
+            ]}, 
+            worldsFolder: "OFFLINE", 
             servers: [
-                { addr: "wss://server-address-1.com", name: "Default Server 1" },
-                { addr: "wss://server-address-2.com", name: "Default Server 2" },
-                { addr: "wss://server-address-3.com", name: "Default Server 3" }
+                { addr: "wss://mc.theludos.com/", name: "The LUDOS" },
+                { addr: "wss://aeon-network.net/", name: "Aeon Network" },
+                { addr: "wss://legend.69.mu/", name: "Legend Network" }
             ],
             relays: [
             { addr: "wss://relay.deev.is/", name: "LAX1DUDE's Shared World Relay #1", primary: relayId == 0 },
