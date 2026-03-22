@@ -86,7 +86,7 @@ window.addEventListener("load", function() {
     countdown();
     setTimeout(function(){
         document.getElementById("locally").remove();
-        const relayId = Math.floor(Math.random() * 4); // Updated to 4 to include the 4th relay
+        const relayId = Math.floor(Math.random() * 4);
         window.eaglercraftOpts = {
             container: "game_frame", 
             assetsURI: getAssetsURI(),
@@ -97,9 +97,9 @@ window.addEventListener("load", function() {
             ]}, 
             worldsFolder: "OFFLINE", 
             servers: [
-                { addr: "wss://mc.theludos.com/", name: "The LUDOS" },
-                { addr: "wss://aeon-network.net/", name: "Aeon Network" },
-                { addr: "wss://legend.69.mu/", name: "Legend Network" }
+                { serverAddress: "wss://mc.theludos.com/", serverName: "The LUDOS" },
+                { serverAddress: "wss://aeon-network.net/", serverName: "Aeon Network" },
+                { serverAddress: "wss://legend.69.mu/", serverName: "Legend Network" }
             ],
             relays: [
             { addr: "wss://relay.deev.is/", name: "LAX1DUDE's Shared World Relay #1", primary: relayId == 0 },
